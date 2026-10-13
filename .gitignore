@@ -1,0 +1,48 @@
+# Virtual environments
+.venv/
+venv/
+*/venv/
+env/
+ENV/
+
+# Node.js dependencies & build outputs
+node_modules/
+*/node_modules/
+*/*/node_modules/
+dist/
+*/dist/
+.vite/
+
+# Python cache & compiled bytecode
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Large datasets & compressed archives (>100MB / Multi-GB)
+archive/
+heart_ECG/
+*.zip
+mimic-iv-clinical-database-*/
+cardiac-arrest-prediction/mimic-iv-clinical-database-*/
+cardiac-arrest-prediction/data/
+cardiac-arrest-prediction/patient-survival-prediction/
+
+# Old intermediate model checkpoints (keeps active cardiac_ptbxl_FINAL.keras)
+cardiac_cv_model_v2.h5
+cardiac_cv_model_v3.h5
+cardiac_ptbxl_v1.h5
+
+# Logs & temporary runtime files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System & IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

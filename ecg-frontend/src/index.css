@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f0f4f8;
+  color: #1a202c;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Beautiful Glass/White Cards */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Modern Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #0061ff 0%, #60efff 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 97, 255, 0.3);
+}
+
+.btn-primary:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Form Inputs */
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus, .input-group select:focus {
+  outline: none;
+  border-color: #0061ff;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Medical ECG Background Grid */
+.ecg-grid-container {
+  background-color: white;
+  background-image: 
+    linear-gradient(rgba(255, 105, 180, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 105, 180, 0.4) 1px, transparent 1px),
+    linear-gradient(rgba(255, 0, 0, 0.5) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.5) 2px, transparent 2px);
+  background-size: 10px 10px, 10px 10px, 50px 50px, 50px 50px;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* This blends the white background of your image into the grid! */
+.ecg-image-blend {
+  mix-blend-mode: multiply; 
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
